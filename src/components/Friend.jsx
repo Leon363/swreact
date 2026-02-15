@@ -1,6 +1,6 @@
+import {bestFriends} from "../utils/constants.js";
 
-
-const Friend = ({friend, pos}) => {
+const Friend = ({item, pos}) => {
     let styles = "col-sm-4 p-1"
     if(pos === 9) {
         styles += " rounded-bottom-right"
@@ -9,7 +9,7 @@ const Friend = ({friend, pos}) => {
         styles += " rounded-bottom-left"
     }
     return (
-        <img className={styles} src={friend} alt="Friend"/>
+        <img className={styles} src={item} alt="Friend"/>
     );
 };
 
