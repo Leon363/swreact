@@ -9,6 +9,7 @@ import friend8 from "../assets/friend8.jpg";
 import friend9 from "../assets/friend9.jpg";
 
 export const navItems = ['Home', 'About me', 'Star Wars', 'Contact'];
+export const base_url = `https://sw-info-api.herokuapp.com`
 export const openingCrawl4 = `It is a period of civil war.
             Rebel spaceships, striking
             from a hidden base, have won
