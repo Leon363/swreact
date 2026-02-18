@@ -17,7 +17,7 @@ const AboutMe = () => {
             <p>Gender: {aboutMe.gender}</p>
             <p>Year of birth: {aboutMe.birth_year} (Before the Battle of Yavin)  </p>
             <p>Weight: {aboutMe.mass}</p>
-            <p>Eyes: {aboutMe.eye_color}</p>
+            <p>Eyes: {aboutMe.eye_color }</p>
             <p></p>
         </div>
     );
