@@ -1,4 +1,4 @@
-import '../Contact.css'
+
 import {useEffect, useState} from "react";
 import {base_url, timeLimitData} from "../utils/constants.js";
 
