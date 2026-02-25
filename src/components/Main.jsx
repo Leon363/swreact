@@ -3,10 +3,13 @@ import AboutMe from "./AboutMe.jsx";
 import Contact from "./Contact.jsx";
 import StarWars from "./StarWars.jsx";
 import {navItems} from "../utils/constants.js";
+import {useContext} from "react";
+import {StarWarsContext} from "../utils/context.js";
 
-const Main = ({page}) => {
+const Main = () => {
+    const value = useContext(StarWarsContext)
 
-    switch (page) {
+    switch (value) {
         case navItems[1]:
             return <AboutMe/>;
         case navItems[2]:

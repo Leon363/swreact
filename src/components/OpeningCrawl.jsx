@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {base_url} from "../utils/constants.js";
-import data from "bootstrap/js/src/dom/data.js";
+
 
 const OpeningCrawl = () => {
     const [openingCrawl, setOpeningCrawl] = useState(() => sessionStorage.getItem("opening_crawl"))
@@ -18,18 +18,11 @@ const OpeningCrawl = () => {
         }
     }, [openingCrawl])
 
-    if (openingCrawl) {
+
         return (
-            <p className="far-galaxy">{openingCrawl}</p>
+            <p className="text-3xl text-justify leading-normal tracking-widest">{openingCrawl}</p>
         )
-    } else {
-        return (
-            <p className="far-galaxy">
-                <span className={'spinner-border spinner-border-sm'}></span>
-                <span className={'spinner-grow spinner-grow-sm'}>Loading...</span>
-            </p>
-        )
-    }
+
 }
 
 export default OpeningCrawl;

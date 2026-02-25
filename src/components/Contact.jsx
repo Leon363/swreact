@@ -1,5 +1,7 @@
+import '../Contact.css'
 import {useEffect, useState} from "react";
 import {base_url, timeLimitData} from "../utils/constants.js";
+
 
 const Contact = () => {
     const [planets, setPlanets] = useState(() => {
@@ -39,18 +41,18 @@ const Contact = () => {
 
 
     return (
-        <div className="container">
-            <form>
+        <>
+            <form className='bg-white/0  p-6 rounded-lg'>
 
                 <label htmlFor="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
+                <input className='w-full p-3 border border-gray-300 rounded mt-1 mb-4 bg-transparent ' type="text"  name="firstname" placeholder="Your name.."/>
 
                 <label htmlFor="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
+                <input className='w-full p-3 border border-gray-300 rounded mt-1 mb-4 bg-transparent' type="text"  name="lastname" placeholder="Your last name.."/>
 
                 <label htmlFor="planets">Planet</label>
-                <select id="planets" name="planets" defaultValue='' >
-                    <option value="">Choose the planet</option>
+                <select className='w-full p-3 border border-gray-300 rounded mt-1 mb-4 bg-transparent'  name="planets" defaultValue='' >
+                    <option className='bg-transparent' value="">Choose the planet</option>
 
                     {planets.map((planet, index) => (
                         <option key={index} value={planet.name} placeholder="Your last name..">
@@ -62,12 +64,12 @@ const Contact = () => {
 
                 <label htmlFor="subject">Subject</label>
 
-                <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                <textarea  className='w-full p-3 border border-gray-300 rounded mt-1 mb-4 bg-transparent h-48' id="subject" name="subject" placeholder="Write something.."></textarea>
 
-                <input type="submit" className='nav-item btn btn-danger border-warning' value="Submit"/>
+                <button type="submit" className='bg-red-500 hover:bg-red-700 py-3 px-5 rounded cursor-pointer hover:text-white' value="Submit">Submit</button>
 
             </form>
-        </div>
+        </>
     )
 }
 
